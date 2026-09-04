@@ -10,6 +10,16 @@
   <a href="https://ajoyp.gumroad.com">More AJOY Tools</a>
 </p>
 
+<p align="center">
+  <a href="[YOUR_YOUTUBE_VIDEO_LINK](https://www.youtube.com/shorts/pPo6WNQBRcA?feature=share)">
+    <img src="YOUR_YOUTUBE_THUMBNAIL_LINK" alt="Rivet for Maya — Video Demo" width="900">
+  </a>
+</p>
+
+<p align="center">
+  <strong>▶ Watch the Rivet Maya Tool Demo</strong>
+</p>
+
 ---
 
 ## Overview
