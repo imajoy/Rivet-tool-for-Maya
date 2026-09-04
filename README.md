@@ -12,14 +12,8 @@
 
 <p align="center">
   <a href="https://www.youtube.com/shorts/pPo6WNQBRcA">
-    <img src="https://i.ytimg.com/vi/pPo6WNQBRcA/hqdefault.jpg"
-         alt="▶ Watch Rivet — Poly & NURBS Surface Pinning Tool for Maya"
-         width="900">
+    <img src="https://img.shields.io/badge/▶_Watch_on_YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch on YouTube">
   </a>
-</p>
-
-<p align="center">
-  <strong>▶ Watch the Video Demo</strong>
 </p>
 
 ---
