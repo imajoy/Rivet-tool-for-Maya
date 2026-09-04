@@ -11,13 +11,15 @@
 </p>
 
 <p align="center">
-  <a href="[YOUR_YOUTUBE_VIDEO_LINK](https://www.youtube.com/shorts/pPo6WNQBRcA?feature=share)">
-    <img src="YOUR_YOUTUBE_THUMBNAIL_LINK" alt="Rivet for Maya — Video Demo" width="900">
+  <a href="https://www.youtube.com/shorts/pPo6WNQBRcA">
+    <img src="https://i.ytimg.com/vi/pPo6WNQBRcA/hqdefault.jpg"
+         alt="▶ Watch Rivet — Poly & NURBS Surface Pinning Tool for Maya"
+         width="900">
   </a>
 </p>
 
 <p align="center">
-  <strong>▶ Watch the Rivet Maya Tool Demo</strong>
+  <strong>▶ Watch the Video Demo</strong>
 </p>
 
 ---
