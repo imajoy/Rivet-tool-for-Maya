@@ -1,13 +1,13 @@
 # Rivet — Poly & NURBS Surface Pinning Tool for Maya
 
 <p align="center">
-  <strong>A modern Python conversion of the classic Maya Rivet workflow.</strong>
+  <strong>Attach controls, props, and geometry to live Maya surfaces with a simple Rivet locator.</strong>
 </p>
 
 <p align="center">
   <a href="https://github.com/imajoy/rivet-maya">GitHub</a>
   ·
-  <a href="https://ajoyp.gumroad.com/l/cmljjj">Gumroad</a>
+  <a href="https://ajoyp.gumroad.com">More AJOY Tools</a>
 </p>
 
 ---
@@ -22,64 +22,85 @@ or other rigging elements to a deforming surface without requiring skin
 weighting.
 
 This project is a **Python conversion and reimplementation of the classic
-Rivet MEL workflow originally created by Michael Bazhutkin / studio
-Klassika in 2000–2001**. The original copyright attribution is retained
-in the source and license.
+Maya Rivet MEL workflow originally created by Michael Bazhutkin / studio
+Klassika in 2000–2001**.
 
-The Python version is designed to provide the same classic rivet workflow
-inside modern Maya Python environments, with improved selection validation
-and a custom Maya-friendly warning dialog.
+The Python version brings the Rivet workflow into Maya's Python environment
+with improved selection validation, modern PySide support, and a corrected
+world-space mesh connection.
 
 ---
 
-## ✨ Features
+## Installation
+
+### 1. Download
+
+Download `rivet.py` from this repository:
+
+### 2. Place the Script
+
+Place `rivet.py` in a directory available to Maya's Python path.
+
+### Import and Run
+
+Open Maya's **Script Editor** and switch to the **Python** tab.
+
+Select the required components in Maya, then run:
+
+```python
+import importlib
+import rivet
+importlib.reload(rivet)
+rivet.rivet()
+```
+
+## Features
 
 ### Polygon Mesh Rivet
 
-Select exactly **two polygon edges on the same mesh** and create a rivet
-locator at the center of the resulting surface construction.
+Select **exactly two polygon edges on the same mesh** and create a rivet
+locator at the center of the surface construction.
 
-The tool builds a small curve loft between the selected edges and uses the
-center of that loft to drive the rivet.
+The tool creates a mini curve loft between the selected edges and samples its
+center to position the rivet.
 
 ### NURBS Surface Rivet
 
-Select exactly **one point on a NURBS surface** and create a rivet locator
-directly at that surface position.
+Select **exactly one point on a NURBS surface** and create a rivet locator
+directly at that surface point.
 
 ### Live Surface Follow
 
-The generated locator remains connected to the surface, allowing controls,
-props, geometry, or other rig elements parented under it to follow the
-surface as it deforms.
+The generated locator remains connected to the surface.
+
+Any control, prop, geometry, or other object parented under the locator can
+follow the surface as it deforms.
 
 ### Automatic Orientation
 
-The rivet uses surface position, normal, and tangent information to orient
-the locator relative to the surface.
+The rivet uses the surface position, normal, and tangent information to
+orient the locator relative to the surface.
 
 ### Smart Selection Validation
 
-The tool checks the current component selection before creating the rivet.
+The tool validates the current selection before creating the rivet.
 
-Invalid selections are reported through a custom warning dialog instead of
-leaving only a Python traceback in the Script Editor.
-
-### Maya-Friendly UI
-
-Invalid-selection warnings use a dark PySide interface designed to fit
-naturally into the Maya environment.
+Invalid selections display a custom warning dialog instead of producing an
+unhandled error in the Maya Script Editor.
 
 ### PySide2 / PySide6 Support
 
-The tool uses:
+The tool supports both:
 
-- **PySide2** when available
-- **PySide6** as a fallback for newer Maya versions
+- **PySide2**
+- **PySide6**
 
-### Named Rivets
+This allows the same script to work across Maya versions using the available
+Qt environment.
 
-You can optionally provide a custom name when creating a rivet:
+### Custom Rivet Names
+
+The rivet can optionally be given a custom name:
 
 ```python
 rivet.rivet("myRivet")
